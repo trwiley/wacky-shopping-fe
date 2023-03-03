@@ -5,12 +5,11 @@ const authToken = async function(username, password){
         "username": username,
         "password": password
     })
-    const url = `${baseUrl}auth-token/`
+    const url = `${baseUrl}/auth-token/`
     const response = await fetch(url, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": baseUrl,
         },
         body: requestBody
     });

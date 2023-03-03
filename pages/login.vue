@@ -11,6 +11,7 @@
 
 <script>
 import authToken from '../api_interface/auth.js';
+
 export default{
     name: 'login',
     auth: 'false',
@@ -22,8 +23,8 @@ export default{
     },
     methods: {
         async login() {
-            console.log(typeof authToken)
             await authToken(this.username, this.password); 
+            //await this.$router.push('/')
         }
     }
 }
