@@ -14,7 +14,10 @@ const authToken = async function(username, password){
         body: requestBody
     });
 
-    console.log(response);
+    const objectResponse = await response.json();
+
+    //Add the token to the local storage.
+    localStorage.setItem('token', objectResponse.token);
 
 }
 

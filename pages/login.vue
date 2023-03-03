@@ -24,7 +24,7 @@ export default{
     methods: {
         async login() {
             await authToken(this.username, this.password); 
-            //await this.$router.push('/')
+            await this.$router.push('/')
         }
     }
 }
